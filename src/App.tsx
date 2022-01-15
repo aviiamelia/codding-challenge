@@ -1,13 +1,13 @@
 import GlobalStyle from "./styles/global";
-import ProductsList from "./components/Products";
 import Header from "./components/Header";
+import Routes from "./Routes";
 
 function App() {
   return (
     <>
       <GlobalStyle />
       <Header />
-      <ProductsList />
+      <Routes />
     </>
   );
 }

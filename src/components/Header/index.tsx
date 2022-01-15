@@ -1,9 +1,14 @@
-import { HeaderContainer, CardRoutes } from "./styles";
+import { HeaderContainer, CardHome } from "./styles";
+import { AiTwotoneHome } from "react-icons/ai";
+import { useHistory } from "react-router-dom";
 
 const Header = () => {
+  const history = useHistory();
   return (
     <HeaderContainer>
-      <CardRoutes>Home</CardRoutes>
+      <CardHome onClick={() => history.push("/")}>
+        <AiTwotoneHome />
+      </CardHome>
     </HeaderContainer>
   );
 };
