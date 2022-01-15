@@ -1,5 +1,11 @@
+import { HeaderContainer, CardRoutes } from "./styles";
+
 const Header = () => {
-  return <></>;
+  return (
+    <HeaderContainer>
+      <CardRoutes>Home</CardRoutes>
+    </HeaderContainer>
+  );
 };
 
 export default Header;

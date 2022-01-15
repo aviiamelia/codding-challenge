@@ -1,4 +1,4 @@
-import {createGlobalStyle} from "styled-components"
+import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
      *{
@@ -8,11 +8,11 @@ export default createGlobalStyle`
         outline: none;
     }
     :root{
-        --purple:#512F82,
-        --acquaGreen:#37CCBD,
-        --darkAcquaGreen:#29978C,
-        --white:#D9FFFD,
-        --darkGrey:#2D3333
+        --purple:#512F82;
+        --acquaGreen:#37CCBD;
+        --darkAcquaGreen:#29978C;
+        --white:#D9FFFD;
+        --darkGrey:#2D3333;
     }
     body {
         font-family: 'Roboto Mono', monospace;
@@ -22,4 +22,4 @@ export default createGlobalStyle`
         border:none;
         border-radius: 8px;
     }
-`
+`;
