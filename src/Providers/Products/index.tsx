@@ -5,6 +5,8 @@ import {
   useContext,
   useEffect,
   useState,
+  SetStateAction,
+  Dispatch,
 } from "react";
 import { api } from "../../service";
 
@@ -23,6 +25,7 @@ interface IproductsContext {
   cart: iproducts[];
   addToCart: (product: iproducts) => void;
   removeFromCart: (product: iproducts) => void;
+  setCart: Dispatch<SetStateAction<iproducts[]>>;
 }
 
 const ProductsContext = createContext({} as IproductsContext);
@@ -53,7 +56,7 @@ export const ProductsProvider = ({ children }: IproductsList) => {
   }, [getProducts]);
   return (
     <ProductsContext.Provider
-      value={{ products, cart, addToCart, removeFromCart }}
+      value={{ products, cart, addToCart, removeFromCart, setCart }}
     >
       {children}
     </ProductsContext.Provider>
