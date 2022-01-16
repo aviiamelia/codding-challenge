@@ -51,6 +51,8 @@ export const TotalContainer = styled.div`
 `
 export const Number = styled.div`
     color: white;
+    height: 27px;
+    margin-bottom: 7px;
     font-size: 20px;
     top: 15%;
     line-height: 50px;
