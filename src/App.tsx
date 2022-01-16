@@ -1,5 +1,16 @@
+import GlobalStyle from "./styles/global";
+import Header from "./components/Header";
+import Routes from "./Routes";
+import { AppContainer } from "./components/Container/styles";
+
 function App() {
-  return <div className="App"></div>;
+  return (
+    <AppContainer>
+      <GlobalStyle />
+      <Header />
+      <Routes />
+    </AppContainer>
+  );
 }
 
 export default App;
