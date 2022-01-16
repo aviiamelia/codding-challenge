@@ -23,7 +23,6 @@ const ProductsList = () => {
   const total = cart.reduce((a, b) => a + b.price, 0);
   const [input, setInput] = useState<string>("");
   const [width, setWidth] = useState(window.innerWidth);
-  console.log(total);
   const filteredCart = cart.filter(
     (value, index, self) =>
       index === self.findIndex((elem) => elem.id === value.id)
