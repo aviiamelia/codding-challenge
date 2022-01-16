@@ -11,6 +11,7 @@ import {
   InputContainer,
   Input,
   ProductsContainer,
+  DiscountSelector,
 } from "./styles";
 
 import CardCart from "../CardCart";
@@ -23,11 +24,12 @@ const ProductsList = () => {
   const total = cart.reduce((a, b) => a + b.price, 0);
   const [input, setInput] = useState<string>("");
   const [width, setWidth] = useState(window.innerWidth);
+  const [discount, setDiscount] = useState<string>("0");
+  const discounts = [109, 25, 99, 75];
   const filteredCart = cart.filter(
     (value, index, self) =>
       index === self.findIndex((elem) => elem.id === value.id)
   );
-  console.log(input);
   useEffect(() => {
     const handleResizeWindow = () => setWidth(window.innerWidth);
     window.addEventListener("resize", handleResizeWindow);
@@ -79,6 +81,17 @@ const ProductsList = () => {
           <Span>
             <AiOutlineShoppingCart />
           </Span>
+          <DiscountSelector onChange={(e) => setDiscount(e.target.value)}>
+            <option value="0" onClick={() => setDiscount("0")}></option>
+            {discounts.map((element) => (
+              <option value={element.toString()}>
+                {Intl.NumberFormat("en-US", {
+                  style: "currency",
+                  currency: "USD",
+                }).format(element)}
+              </option>
+            ))}
+          </DiscountSelector>
           <SecondaryContainer>
             {filteredCart.map((product, index) => (
               <CardCart
@@ -93,11 +106,11 @@ const ProductsList = () => {
           <TotalContainer>
             <Button>BUY</Button>
             <Number>
-              Total:{" "}
+              Total:
               {Intl.NumberFormat("en-US", {
                 style: "currency",
                 currency: "USD",
-              }).format(total)}
+              }).format(total > 0 ? total - parseInt(discount) : 0)}
             </Number>
           </TotalContainer>
         </CartContainer>

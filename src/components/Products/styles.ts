@@ -79,3 +79,17 @@ export const ProductsContainer = styled.div`
     min-height: 400px;
 
 `
+export const DiscountSelector = styled.select`
+    width: 100px;
+    height: 35px;
+    top: 1%;
+    right: 2%;
+    border: 2px solid var(--darkAcquaGreen);
+    position: absolute;
+    border-radius: 8px;
+`
+export const DivOption = styled.div`
+    width: 100px;
+    height: 35px;
+    background-color: white;
+`
