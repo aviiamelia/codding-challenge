@@ -52,7 +52,6 @@ const MobileCart = () => {
         </SecondaryContainer>
 
         <TotalContainer>
-          <Button>BUY</Button>
           <Number>
             Total:
             {Intl.NumberFormat("en-US", {
@@ -60,6 +59,7 @@ const MobileCart = () => {
               currency: "USD",
             }).format(total > 0 ? total - parseInt(discount) : 0)}
           </Number>
+          <Button>BUY</Button>
         </TotalContainer>
       </CartContainer>
     </Container>

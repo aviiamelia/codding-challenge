@@ -63,12 +63,11 @@ export const InputContainer = styled.div`
     display: flex;
     position: absolute;
     top: 10%;
-    right: 18%;
+    right: 30%;
     min-width: 200px;
     justify-content: center;
 `
 export const Input = styled.input`
-    width: 450px;
     height: 40px;
     font-size: 20px;
     padding-left: 5px;
