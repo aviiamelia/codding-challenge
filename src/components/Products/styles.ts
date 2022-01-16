@@ -51,6 +51,8 @@ export const TotalContainer = styled.div`
 `
 export const Number = styled.div`
     color: white;
+    height: 27px;
+    margin-bottom: 7px;
     font-size: 20px;
     top: 15%;
     line-height: 50px;
@@ -61,12 +63,11 @@ export const InputContainer = styled.div`
     display: flex;
     position: absolute;
     top: 10%;
-    right: 18%;
+    right: 30%;
     min-width: 200px;
     justify-content: center;
 `
 export const Input = styled.input`
-    width: 450px;
     height: 40px;
     font-size: 20px;
     padding-left: 5px;
@@ -78,4 +79,18 @@ export const ProductsContainer = styled.div`
     min-width: 1080px;
     min-height: 400px;
 
+`
+export const DiscountSelector = styled.select`
+    width: 100px;
+    height: 35px;
+    top: 1%;
+    right: 2%;
+    border: 2px solid var(--darkAcquaGreen);
+    position: absolute;
+    border-radius: 8px;
+`
+export const DivOption = styled.div`
+    width: 100px;
+    height: 35px;
+    background-color: white;
 `
