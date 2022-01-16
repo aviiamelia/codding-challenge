@@ -15,12 +15,14 @@ interface iproducts {
   id: string;
   name: string;
   price: number;
+  quantity?: number | undefined;
 }
 
 interface IproductsContext {
   products: iproducts[];
   cart: iproducts[];
   addToCart: (product: iproducts) => void;
+  removeFromCart: (product: iproducts) => void;
 }
 
 const ProductsContext = createContext({} as IproductsContext);
@@ -35,12 +37,24 @@ export const ProductsProvider = ({ children }: IproductsList) => {
   }, []);
   const addToCart = (product: iproducts) => {
     setCart([...cart, product]);
+    if (product.quantity === undefined) {
+      product.quantity = 1;
+    } else {
+      product.quantity += 1;
+    }
+  };
+
+  const removeFromCart = (product: iproducts) => {
+    const newList = cart.filter((item) => item.id !== product.id);
+    setCart(newList);
   };
   useEffect(() => {
     getProducts();
   }, [getProducts]);
   return (
-    <ProductsContext.Provider value={{ products, cart, addToCart }}>
+    <ProductsContext.Provider
+      value={{ products, cart, addToCart, removeFromCart }}
+    >
       {children}
     </ProductsContext.Provider>
   );
