@@ -8,9 +8,10 @@ export const CardContainer = styled.div`
     border-radius: 8px;
     height: 350px;
     width: 250px;
-    margin-right: 5px;
+    margin-right: 20px;
     padding-bottom: 10px;
     margin-bottom: 15px;
+    
    
 `
 export const Text = styled.div`
@@ -22,9 +23,11 @@ export const Text = styled.div`
 export const Button = styled.button`
     width: 150px;
     height: 40px;
+    font-weight: bold;
+    font-size: 20px;
     margin: 0 auto;
     margin-top:10px ;
     background-color: var(--acquaGreen);
     border-radius: 8px;
-    color: var(--darkGrey);
+    color: var(--white);
 `

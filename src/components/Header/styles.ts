@@ -18,6 +18,9 @@ export const CardHome = styled.div`
 export const CardCart = styled.div`
     color:var(--darkGrey);
     height: 100%;
+    display: flex;
+    justify-content: center;
+    width: 80px;
     font-size: 45px;
     position: relative;
     cursor: pointer;
@@ -27,6 +30,6 @@ export const Number = styled.div`
     color: white;
     font-size: 20px;
     top: 15%;
-    left: 0;
+    left: 4%;
     font-weight: 500;
 `
