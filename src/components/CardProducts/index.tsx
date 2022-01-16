@@ -17,7 +17,7 @@ const Card = ({ name, price, onClick }: iproduct) => {
           currency: "USD",
         }).format(price)}
       </Text>
-      <Button onClick={onClick}>Add</Button>
+      <Button onClick={onClick}>ADD</Button>
     </CardContainer>
   );
 };
