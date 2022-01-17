@@ -14,6 +14,12 @@ export const ModalContainer = styled.div`
     justify-content: space-around;
     height: 500px;
     border-radius: 8px;
+    @media (max-width: 700px){
+        width: 300px;
+        height: 400px;
+        top:20%;
+        z-index: 2;
+    }
 `
 export const Title = styled.h1`
     text-align: center;

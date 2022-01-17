@@ -11,7 +11,7 @@ interface iproduct {
 
 const CardCart = ({ name, price, quantity, onClick }: iproduct) => {
   return (
-    <CardCartContainer>
+    <CardCartContainer data-testid="Cart-card-element">
       <Text>{name}</Text>
       <SpanNumber>{quantity}</SpanNumber>
       <Text>
