@@ -1,46 +1,52 @@
-# Getting Started with Create React App
+Codding challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Coding Chalenge
 
-## Available Scripts
+# repository
 
-In the project directory, you can run:
+-https://github.com/aviiamelia/codding-challenge
 
-### `yarn start`
+Apllication developed to emulated a shopping cart system
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Introduction
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+This application was developed with intention to be a codding challenge. The application is based on a cart flow which you can add and remove items from the cart
 
-### `yarn test`
+# How to install the project dependencies
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-Project was developed in reactJs, so you will need
+node to run this project.
+I reccomend the v16.13.1
+which is the one that I used
+-If you using linux the cli to install node will be: sudo apt install nodejs
+-if you are on windows you have to download the exe file from the website and manually install
 
-### `yarn build`
+- Havin node installed, you will need to be in the root of the project, the same folder which the 'src' folder is located, and then you will use the command: yarn
+  or npm install
+  This will install all the libraries and dependecies necessary to the application work
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# How to use localy
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+After installing the dependencies, still in the root of the project you will use the command:
+yarn start
+This will open the project in the 'localhost:3000'
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# How to run the tests
 
-### `yarn eject`
+-I used to types of tests, unity test and E2E. To run the unity test you will just need to use the command:
+yarn test or npm test
+-Now for the E2E tests, you will notice a folder called cypress in the root of the project, the tests are there, the path to the test is cypress/integration/products.spec.js
+-Now how to run the tests the E2E tests, you will need to be running the aplication with 'yarn start', with that in mind you will use the command 'yarn run cypress open', this will open a screen which you will see the 'integration' folder with all the tests, after that you will just need to click on the file products.spec.js, and the cypress will run the automated tests
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# Follow-up questions
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. How long did you spend on the test?
+   -It took me about 4 days to do it
+2. What would you add if you had more time?
+   -I would make a figma sketch and work more in the styles, make it look better and more professional, maybe add some animations
+3. How would you improve the product APIs that you had to consume?
+   -I would add and image to each product and add more products. I could also make a register and login route, so that the bought products would be saved in the cart
+4. What did you find most difficult?
+   -I think was to implement the tests
+5. How did you find the overall experience, any feedback for us?
+   -It was really productive I learned a lot, i'm more confident in my skills now, and I was abble to learn new things, like automated tests and some other features that I used and will definitively use in the future
