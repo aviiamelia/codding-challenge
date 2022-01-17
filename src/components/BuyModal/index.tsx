@@ -11,7 +11,7 @@ interface IbuyModal {
 const BuyModal = ({ items, isOpen, setIsOpen, setCart }: IbuyModal) => {
   return isOpen ? (
     <ModalContainer>
-      <Title>You have Bought {items}</Title>
+      <Title>You have Bought {items} items</Title>
       <Button onClick={() => setIsOpen(!isOpen)}>Keep shopping!!</Button>
       <Button onClick={setCart}>Finish purchase!!</Button>
     </ModalContainer>

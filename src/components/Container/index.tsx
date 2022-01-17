@@ -6,6 +6,6 @@ interface Icontainer {
 }
 
 const Container = ({ children }: Icontainer) => {
-  return <MainContainer>{children}</MainContainer>;
+  return <MainContainer data-testeid="mainContainer">{children}</MainContainer>;
 };
 export default Container;
