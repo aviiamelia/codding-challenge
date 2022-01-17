@@ -17,8 +17,8 @@ const Header = () => {
   }, []);
   const history = useHistory();
   return (
-    <HeaderContainer>
-      <CardHome onClick={() => history.push("/")}>
+    <HeaderContainer data-testid="headerContainer">
+      <CardHome onClick={() => history.push("/")} data-testeid="CardHome">
         <AiTwotoneHome />
       </CardHome>
       {width < breakpoint ? (

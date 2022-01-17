@@ -7,7 +7,7 @@ import {
 } from "../Products/styles";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { useProducts } from "../../Providers/Products";
-import { Button } from "../CardProducts/styles";
+import Button from "../Button";
 import { Number } from "../Products/styles";
 import CardCart from "../CardCart";
 import { useState } from "react";
@@ -73,7 +73,12 @@ const MobileCart = () => {
               currency: "USD",
             }).format(total > 0 ? total - parseInt(discount) : 0)}
           </Number>
-          <Button onClick={() => setIsOpen(!isOpen)}>BUY</Button>
+          <Button
+            text="Buy"
+            setIsOpen={setIsOpen}
+            isOpen={isOpen}
+            disabled={cart.length > 0 ? false : true}
+          />
         </TotalContainer>
       </CartContainer>
     </Container>
