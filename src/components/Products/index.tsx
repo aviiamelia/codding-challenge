@@ -32,9 +32,16 @@ const ProductsList = () => {
     (value, index, self) =>
       index === self.findIndex((elem) => elem.id === value.id)
   );
+  const cleanCart = () => {
+    products.map((product) => {
+      return (product.quantity = undefined);
+    });
+    setCart([]);
+  };
   useEffect(() => {
     const handleResizeWindow = () => setWidth(window.innerWidth);
     window.addEventListener("resize", handleResizeWindow);
+
     return () => {
       window.removeEventListener("resize", handleResizeWindow);
     };
@@ -47,7 +54,7 @@ const ProductsList = () => {
             isOpen={isOpen}
             setIsOpen={setIsOpen}
             items={cart.length}
-            setCart={() => setCart([])}
+            setCart={cleanCart}
           />
           {products
             .filter((ele) =>
@@ -93,8 +100,8 @@ const ProductsList = () => {
             onChange={(e) => setDiscount([...discount, e.target.value])}
           >
             <option value="0"></option>
-            {discounts.map((element) => (
-              <option value={element.toString()}>
+            {discounts.map((element, index) => (
+              <option key={index} value={element.toString()}>
                 {Intl.NumberFormat("en-US", {
                   style: "currency",
                   currency: "USD",
