@@ -1,16 +1,11 @@
 import { ModalContainer, Title, Button } from "./styles";
 import { SetStateAction, Dispatch } from "react";
-interface iproducts {
-  id: string;
-  name: string;
-  price: number;
-  quantity?: number | undefined;
-}
+
 interface IbuyModal {
   items: number;
   isOpen: boolean;
   setIsOpen: Dispatch<SetStateAction<boolean>>;
-  setCart: Dispatch<SetStateAction<iproducts[]>>;
+  setCart: () => void;
 }
 
 const BuyModal = ({ items, isOpen, setIsOpen, setCart }: IbuyModal) => {
@@ -18,7 +13,7 @@ const BuyModal = ({ items, isOpen, setIsOpen, setCart }: IbuyModal) => {
     <ModalContainer>
       <Title>You have Bought {items}</Title>
       <Button onClick={() => setIsOpen(!isOpen)}>Keep shopping!!</Button>
-      <Button onClick={() => setCart([])}>Finish purchase!!</Button>
+      <Button onClick={setCart}>Finish purchase!!</Button>
     </ModalContainer>
   ) : (
     <></>

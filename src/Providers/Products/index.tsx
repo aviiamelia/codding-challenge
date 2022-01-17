@@ -8,7 +8,8 @@ import {
   SetStateAction,
   Dispatch,
 } from "react";
-import { api } from "../../service";
+import { api } from "../../services";
+import { backupProducts } from "../../services/backup";
 
 interface IproductsList {
   children: ReactNode;
@@ -33,10 +34,14 @@ const ProductsContext = createContext({} as IproductsContext);
 export const ProductsProvider = ({ children }: IproductsList) => {
   const [products, setProducts] = useState<iproducts[]>([]);
   const [cart, setCart] = useState<iproducts[]>([]);
-  console.log(products);
 
   const getProducts = useCallback(() => {
-    api.get("/products").then((response) => setProducts(response.data));
+    api
+      .get("/products")
+      .then((response) => setProducts(response.data))
+      .catch((_) => {
+        setProducts(backupProducts);
+      });
   }, []);
   const addToCart = (product: iproducts) => {
     setCart([...cart, product]);
